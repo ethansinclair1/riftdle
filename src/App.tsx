@@ -216,6 +216,7 @@ export default function App() {
 
   const outcome: Outcome = guesses.some((g) => g.win) ? "won" : guesses.length >= MAX_GUESSES ? "lost" : "playing";
   const [modalOpen, setModalOpen] = useState(() => outcome !== "playing");
+  const [statsOpen, setStatsOpen] = useState(false);
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.champion.id)), [guesses]);
 
   useEffect(() => {
@@ -303,24 +304,18 @@ export default function App() {
   const emptyRows = Math.max(0, MAX_GUESSES - guesses.length);
 
   return (
-    <div className="page">
-      <div className="scanlines" aria-hidden="true" />
+    <>
+      <div className="bg-image" aria-hidden="true" />
+      <div className="bg-scrim" aria-hidden="true" />
+      <div className="page">
       <header className="topbar">
         <div className="brand">
           <span className="brand-mark">◈</span>
-          RIFTDLE
+          Riftdle
         </div>
-        <div className="stats-strip">
-          <span>
-            <strong>{stats.wins}</strong> WON
-          </span>
-          <span>
-            <strong>{stats.streak}</strong> STREAK
-          </span>
-          <span>
-            <strong>{stats.maxStreak}</strong> BEST
-          </span>
-        </div>
+        <button className="stats-btn" onClick={() => setStatsOpen(true)} aria-label="Stats">
+          <BarsIcon />
+        </button>
       </header>
 
       <p className="subhead">One champion a day. Six tries. Guess wisely.</p>
@@ -424,10 +419,13 @@ export default function App() {
         />
       )}
 
+      {statsOpen && <StatsModal stats={stats} onClose={() => setStatsOpen(false)} />}
+
       <footer className="foot">
         Champion data via Riot Games' public API. Not affiliated with or endorsed by Riot Games.
       </footer>
-    </div>
+      </div>
+    </>
   );
 }
 
@@ -437,6 +435,51 @@ function Cell(props: { level: MatchLevel; arrow?: "higher" | "lower"; children: 
       <span>{props.children}</span>
       {props.arrow === "higher" && <span className="big-arrow">▲</span>}
       {props.arrow === "lower" && <span className="big-arrow">▼</span>}
+    </div>
+  );
+}
+
+function BarsIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+      <rect x="1" y="10" width="4" height="7" rx="0.5" fill="currentColor" />
+      <rect x="7" y="6" width="4" height="11" rx="0.5" fill="currentColor" />
+      <rect x="13" y="1" width="4" height="16" rx="0.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+function StatsModal({ stats, onClose }: { stats: Stats; onClose: () => void }) {
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal modal-stats" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose} aria-label="Close">
+          ×
+        </button>
+        <h2 className="modal-title stats-title">Statistics</h2>
+        <div className="stats-grid">
+          <div className="stat-tile">
+            <div className="stat-num">{stats.played}</div>
+            <div className="stat-label">Played</div>
+          </div>
+          <div className="stat-tile">
+            <div className="stat-num">{stats.played ? Math.round((stats.wins / stats.played) * 100) : 0}%</div>
+            <div className="stat-label">Win rate</div>
+          </div>
+          <div className="stat-tile">
+            <div className="stat-num">{stats.streak}</div>
+            <div className="stat-label">Streak</div>
+          </div>
+          <div className="stat-tile">
+            <div className="stat-num">{stats.maxStreak}</div>
+            <div className="stat-label">Best streak</div>
+          </div>
+        </div>
+        <div className="modal-countdown">
+          <div className="countdown-label">Next champion in</div>
+          <Countdown />
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,22 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap");
 
 :root {
   color-scheme: dark;
-  --bg: #05060a;
-  --bg-2: #0a0c14;
-  --panel: #0d101a;
-  --border: #1c2130;
-  --text: #e8ecf4;
-  --muted: #6b7288;
+  --bg: #0a0a0d;
+  --panel: rgba(17, 18, 24, 0.92);
+  --panel-solid: #121319;
+  --border: #2a2c38;
+  --text: #eef0f6;
+  --muted: #8c90a4;
   --accent: #2fe6d6;
   --accent-ink: #04211d;
   --correct: #1fae5a;
   --correct-bright: #35d675;
   --partial: #d68a1a;
   --partial-bright: #ffb02e;
-  --wrong: #c23a5a;
+  --wrong: #b83355;
   --wrong-bright: #ff5b82;
-  --empty-border: #262b3c;
+  --empty-border: #333648;
 }
 
 * {
@@ -36,20 +36,28 @@ body {
 
 .page {
   position: relative;
-  max-width: 900px;
+  max-width: 880px;
   margin: 0 auto;
-  padding: 28px 18px 90px;
+  padding: 24px 18px 80px;
   min-height: 100vh;
 }
 
-.scanlines {
+.bg-image {
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: 0;
-  background:
-    radial-gradient(ellipse at top, rgba(47, 230, 214, 0.06), transparent 60%),
-    radial-gradient(ellipse at bottom, rgba(255, 61, 129, 0.05), transparent 60%);
+  background-image: url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  filter: blur(3px) saturate(0.85);
+  transform: scale(1.05);
+}
+
+.bg-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(8, 9, 13, 0.86) 0%, rgba(8, 9, 13, 0.94) 45%, rgba(8, 9, 13, 0.98) 100%);
 }
 
 .page > * {
@@ -61,55 +69,52 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
   border-bottom: 1px solid var(--border);
-  padding-bottom: 16px;
-  margin-bottom: 6px;
+  padding-bottom: 14px;
+  margin-bottom: 4px;
 }
 
 .brand {
-  font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: 0.08em;
+  font-size: 1.45rem;
+  letter-spacing: 0.01em;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .brand-mark {
   color: var(--accent);
-  text-shadow: 0 0 12px rgba(47, 230, 214, 0.6);
 }
 
-.stats-strip {
+.stats-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  width: 34px;
+  height: 34px;
   display: flex;
-  gap: 18px;
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
-  color: var(--muted);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.stats-strip strong {
+.stats-btn:hover {
+  border-color: var(--accent);
   color: var(--accent);
-  font-size: 0.95rem;
-  margin-right: 4px;
 }
 
 .subhead {
   color: var(--muted);
-  font-size: 0.95rem;
-  margin: 18px 0 4px;
+  font-size: 0.92rem;
+  margin: 16px 0 4px;
 }
 
 .live-count {
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
+  font-size: 0.82rem;
   color: var(--muted);
-  margin: 0 0 20px;
+  margin: 0 0 18px;
 }
 
 .live-count strong {
@@ -119,25 +124,24 @@ body {
 .guess-box {
   position: relative;
   z-index: 3;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .input-wrap {
   position: relative;
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 input {
   flex: 1;
-  background: var(--panel);
-  border: 1px solid var(--border);
+  background: var(--panel-solid);
+  border: 2px solid var(--border);
   color: var(--text);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: inherit;
   font-size: 1rem;
-  padding: 14px 16px;
-  border-radius: 2px;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  padding: 12px 14px;
+  border-radius: 6px;
 }
 
 input:focus {
@@ -146,7 +150,7 @@ input:focus {
 }
 
 input:disabled {
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 input::placeholder {
@@ -156,13 +160,12 @@ input::placeholder {
 .go-btn {
   background: var(--accent);
   color: var(--accent-ink);
-  border: none;
-  font-family: "Chakra Petch", sans-serif;
+  border: 2px solid var(--accent);
   font-weight: 700;
-  letter-spacing: 0.06em;
-  padding: 0 24px;
+  letter-spacing: 0.03em;
+  padding: 0 22px;
   cursor: pointer;
-  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+  border-radius: 6px;
 }
 
 .go-btn:hover:not(:disabled) {
@@ -179,8 +182,9 @@ input::placeholder {
   top: calc(100% + 6px);
   left: 0;
   right: 0;
-  background: var(--panel);
+  background: var(--panel-solid);
   border: 1px solid var(--border);
+  border-radius: 6px;
   list-style: none;
   margin: 0;
   padding: 4px;
@@ -197,17 +201,17 @@ input::placeholder {
   background: none;
   border: none;
   color: var(--text);
-  font-family: "IBM Plex Sans", sans-serif;
+  font-family: inherit;
   font-size: 0.95rem;
   padding: 8px 10px;
   text-align: left;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 .suggestions li button:hover,
 .suggestions li button:focus-visible {
-  background: var(--bg-2);
+  background: rgba(255, 255, 255, 0.06);
   outline: none;
 }
 
@@ -219,19 +223,31 @@ input::placeholder {
 }
 
 .tries-left {
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.06em;
+  font-size: 0.78rem;
   color: var(--muted);
-  text-transform: uppercase;
   margin: 8px 2px 20px;
 }
 
 .grid-scroll {
   overflow-x: auto;
   border: 1px solid var(--border);
-  border-radius: 2px;
-  margin-bottom: 28px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.grid-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.grid-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.grid-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
 }
 
 .grid-header,
@@ -242,10 +258,10 @@ input::placeholder {
 }
 
 .grid-header {
-  background: var(--bg-2);
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.68rem;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--muted);
 }
 
@@ -269,7 +285,7 @@ input::placeholder {
 .col-champ {
   position: sticky;
   left: 0;
-  background: var(--bg-2);
+  background: var(--panel-solid);
   z-index: 1;
 }
 
@@ -279,21 +295,21 @@ input::placeholder {
   gap: 10px;
   padding: 8px 12px;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
 .try-index {
   font-family: "IBM Plex Mono", monospace;
   color: var(--muted);
-  font-size: 0.75rem;
-  width: 16px;
+  font-size: 0.72rem;
+  width: 14px;
   flex-shrink: 0;
 }
 
 .champ-cell img {
-  width: 38px;
-  height: 38px;
-  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
   border: 1px solid var(--border);
 }
 
@@ -302,9 +318,9 @@ input::placeholder {
 }
 
 .empty-dot {
-  width: 38px;
-  height: 38px;
-  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  border-radius: 5px;
   border: 1px dashed var(--empty-border);
 }
 
@@ -316,7 +332,7 @@ input::placeholder {
   padding: 10px 14px;
   font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   border-left: 1px solid var(--border);
 }
 
@@ -341,7 +357,7 @@ input::placeholder {
 }
 
 .big-arrow {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1;
 }
 
@@ -350,19 +366,19 @@ input::placeholder {
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--panel);
+  background: var(--panel-solid);
   border: 1px solid var(--accent);
   color: var(--text);
   padding: 10px 18px;
-  border-radius: 2px;
+  border-radius: 6px;
   font-size: 0.85rem;
   z-index: 20;
 }
 
 .foot {
-  margin-top: 40px;
+  margin-top: 36px;
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-align: center;
 }
 
@@ -370,26 +386,24 @@ input::placeholder {
 
 .legend {
   border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 16px 18px;
+  border-radius: 6px;
+  padding: 14px 16px;
   background: var(--panel);
 }
 
 .legend-title {
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .legend-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
-  font-family: "Chakra Petch", sans-serif;
+  gap: 16px;
   font-size: 0.8rem;
-  letter-spacing: 0.02em;
 }
 
 .legend-item {
@@ -399,13 +413,13 @@ input::placeholder {
 }
 
 .swatch {
-  width: 22px;
-  height: 22px;
-  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1;
   flex-shrink: 0;
 }
@@ -432,7 +446,7 @@ input::placeholder {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(2, 3, 6, 0.78);
+  background: rgba(2, 3, 6, 0.75);
   backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
@@ -444,18 +458,20 @@ input::placeholder {
 .modal {
   position: relative;
   width: 100%;
-  max-width: 380px;
-  background: var(--panel);
-  border: 2px solid var(--correct-bright);
-  border-radius: 4px;
-  padding: 32px 28px 26px;
+  max-width: 360px;
+  background: var(--panel-solid);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 26px 24px;
   text-align: center;
-  box-shadow: 0 0 40px rgba(53, 214, 117, 0.25);
+}
+
+.modal-win {
+  border-color: var(--correct-bright);
 }
 
 .modal-lose {
   border-color: var(--wrong-bright);
-  box-shadow: 0 0 40px rgba(255, 91, 130, 0.22);
 }
 
 .modal-close {
@@ -476,11 +492,9 @@ input::placeholder {
 }
 
 .modal-title {
-  font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  font-size: 1.7rem;
-  margin: 0 0 20px;
+  font-size: 1.4rem;
+  margin: 0 0 18px;
   color: var(--correct-bright);
 }
 
@@ -488,38 +502,41 @@ input::placeholder {
   color: var(--wrong-bright);
 }
 
+.stats-title {
+  color: var(--text);
+}
+
 .modal-champ {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .modal-champ img {
-  width: 56px;
-  height: 56px;
-  border-radius: 6px;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
   border: 2px solid var(--border);
 }
 
 .modal-sub {
-  font-family: "Chakra Petch", sans-serif;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--muted);
   text-align: left;
 }
 
 .modal-name {
-  font-family: "Chakra Petch", sans-serif;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: left;
 }
 
 .modal-line {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--muted);
   margin: 0 0 10px;
 }
@@ -532,13 +549,11 @@ input::placeholder {
   background: none;
   border: 1px solid var(--correct-bright);
   color: var(--correct-bright);
-  font-family: "Chakra Petch", sans-serif;
   font-weight: 600;
-  letter-spacing: 0.06em;
   padding: 10px 16px;
   cursor: pointer;
-  border-radius: 2px;
-  margin-top: 8px;
+  border-radius: 6px;
+  margin-top: 6px;
 }
 
 .modal-lose .share-btn {
@@ -547,7 +562,7 @@ input::placeholder {
 }
 
 .share-btn:hover {
-  background: rgba(53, 214, 117, 0.12);
+  background: rgba(53, 214, 117, 0.1);
 }
 
 .share-btn.wide {
@@ -555,15 +570,15 @@ input::placeholder {
 }
 
 .modal-countdown {
-  margin-top: 22px;
-  padding-top: 18px;
+  margin-top: 20px;
+  padding-top: 16px;
   border-top: 1px solid var(--border);
 }
 
 .countdown-label {
-  font-family: "Chakra Petch", sans-serif;
   font-size: 0.68rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 6px;
 }
@@ -571,13 +586,42 @@ input::placeholder {
 .countdown-time {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: 0.05em;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.stat-tile {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 6px;
+}
+
+.stat-num {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--accent);
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-top: 4px;
 }
 
 @keyframes win-flash {
   0% {
-    background: rgba(53, 214, 117, 0.35);
+    background: rgba(53, 214, 117, 0.3);
   }
   100% {
     background: transparent;
@@ -585,16 +629,15 @@ input::placeholder {
 }
 
 @media (max-width: 640px) {
-  .stats-strip {
-    gap: 12px;
-    font-size: 0.68rem;
-  }
-
   .brand {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .legend-items {
     gap: 12px 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
