@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import championsData from "./data/champions.json";
+import { apiBase, setupDiscord } from "./discord";
 
 interface Champion {
   id: string;
@@ -49,7 +50,6 @@ const MAX_GUESSES = 6;
 const STATS_KEY = "riftdle-stats";
 const GUESSES_KEY_PREFIX = "riftdle-guesses-";
 const RANK_KEY_PREFIX = "riftdle-rank-";
-const COUNTER_API = "https://riftdle-server.onrender.com";
 
 // Strips apostrophes, spaces, and other punctuation so "kaisa" matches
 // "Kai'Sa", "chogath" matches "Cho'Gath", "drmundo" matches "Dr. Mundo", etc.
@@ -178,7 +178,7 @@ function storeRank(day: number, rank: number) {
 
 async function fetchCount(day: number): Promise<number | null> {
   try {
-    const res = await fetch(`${COUNTER_API}/api/count?day=${day}`, { signal: AbortSignal.timeout(8000) });
+    const res = await fetch(`${apiBase()}/api/count?day=${day}`, { signal: AbortSignal.timeout(8000) });
     if (!res.ok) return null;
     const data = await res.json();
     return typeof data.count === "number" ? data.count : null;
@@ -189,7 +189,7 @@ async function fetchCount(day: number): Promise<number | null> {
 
 async function postCount(day: number): Promise<number | null> {
   try {
-    const res = await fetch(`${COUNTER_API}/api/count`, {
+    const res = await fetch(`${apiBase()}/api/count`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ day }),
@@ -218,6 +218,10 @@ export default function App() {
   const [modalOpen, setModalOpen] = useState(() => outcome !== "playing");
   const [statsOpen, setStatsOpen] = useState(false);
   const guessedIds = useMemo(() => new Set(guesses.map((g) => g.champion.id)), [guesses]);
+
+  useEffect(() => {
+    setupDiscord();
+  }, []);
 
   useEffect(() => {
     if (!toast) return;

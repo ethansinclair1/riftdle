@@ -48,8 +48,15 @@ app.post("/api/count", (req, res) => {
   res.json({ count: counts[day] });
 });
 
-app.get("/", (_req, res) => {
-  res.send("Riftdle counter API is running.");
+// Serves the client build made for Discord (base "/" instead of the GitHub
+// Pages subpath, see the "build:render" script) so the Activity and its API
+// calls share one origin, which Discord's sandboxed iframe requires.
+const clientDist = path.join(__dirname, "../dist-discord");
+app.use(express.static(clientDist));
+app.get(/^(?!\/api\/).*/, (_req, res) => {
+  res.sendFile(path.join(clientDist, "index.html"), (err) => {
+    if (err) res.status(200).send("Riftdle counter API is running.");
+  });
 });
 
 const port = process.env.PORT || 3300;
