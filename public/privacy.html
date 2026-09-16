@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riftdle Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f5f8;
+    --panel: #ffffff;
+    --border: #dcdfe6;
+    --text: #1b1d27;
+    --muted: #5a5f72;
+    --accent: #0d8f85;
+    --rule: #e4e6ec;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0d;
+      --panel: #121319;
+      --border: #2a2c38;
+      --text: #eef0f6;
+      --muted: #8c90a4;
+      --accent: #2fe6d6;
+      --rule: #23252f;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 64px 24px 120px; }
+
+  header.doc-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 18px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .brand a { color: var(--text); text-decoration: none; }
+
+  .updated {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-size: clamp(2.2rem, 5vw, 3.1rem);
+    line-height: 1.05;
+    margin: 28px 0 12px;
+    text-wrap: balance;
+  }
+
+  .lede {
+    color: var(--muted);
+    font-size: 1.05rem;
+    font-style: italic;
+    max-width: 60ch;
+    margin: 0 0 32px;
+  }
+
+  .doc-links {
+    display: flex;
+    gap: 8px;
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .doc-links a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
+  .doc-links a[aria-current="page"] { color: var(--accent); }
+  .doc-links a:hover, .doc-links a:focus-visible { border-bottom-color: var(--accent); }
+
+  nav.toc {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 56px;
+  }
+
+  nav.toc p {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+
+  nav.toc ol { columns: 2; margin: 0; padding-left: 1.3em; font-size: 0.92rem; }
+  nav.toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+  nav.toc a:hover, nav.toc a:focus-visible { border-bottom-color: var(--accent); }
+
+  section { margin-bottom: 44px; scroll-margin-top: 24px; }
+
+  h2 {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h2 .num { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 0.85em; }
+
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+    .wrap { padding: 40px 18px 90px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="doc-head">
+    <div class="brand">◈ <a href="./">RIFTDLE</a></div>
+    <div class="updated">Effective September 16, 2026</div>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="lede">What Riftdle actually collects — which is close to nothing — laid out plainly.</p>
+
+  <div class="doc-links">
+    <a href="terms.html">Terms of Service</a>
+    <span>·</span>
+    <a href="privacy.html" aria-current="page">Privacy Policy</a>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#summary">Short version</a></li>
+      <li><a href="#local">What stays on your device</a></li>
+      <li><a href="#counter">What reaches our server</a></li>
+      <li><a href="#discord">Discord Activity data</a></li>
+      <li><a href="#sharing">Sharing</a></li>
+      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="summary">
+    <h2><span class="num">01</span> Short version</h2>
+    <p>Riftdle has no accounts, no sign-in, and doesn't know who you are. Your guesses and stats live in your browser's local storage. The only thing that leaves your device is a single anonymous tally: "someone solved today's puzzle."</p>
+  </section>
+
+  <section id="local">
+    <h2><span class="num">02</span> What stays on your device</h2>
+    <p>Riftdle stores the following in your browser's <code>localStorage</code>, never on our servers:</p>
+    <ul>
+      <li>Today's guesses and whether you've solved the current puzzle</li>
+      <li>Your running stats — games played, win streak, guess distribution</li>
+      <li>Your rank position among today's solvers, if you've already played</li>
+    </ul>
+    <p>This data never leaves your browser. Clearing your browser's site data for Riftdle deletes it permanently, and we have no copy.</p>
+  </section>
+
+  <section id="counter">
+    <h2><span class="num">03</span> What reaches our server</h2>
+    <p>When you correctly solve the daily puzzle, your browser sends one request to increment a counter for that day — no identifier, name, IP-derived profile, or device information is attached or stored alongside it. The server keeps a running total per day (e.g. "1,204 people solved September 16's puzzle") and nothing else. We use this only to show the "X summoners found today's champion" count in the game itself.</p>
+  </section>
+
+  <section id="discord">
+    <h2><span class="num">04</span> Discord Activity data</h2>
+    <p>When Riftdle is launched inside Discord, it performs the minimum SDK handshake Discord requires to render an Activity in the client. Riftdle does not request your Discord identity, username, avatar, or any OAuth scope beyond what Discord itself requires to load the Activity frame, and does not read or store anything about your Discord account.</p>
+  </section>
+
+  <section id="sharing">
+    <h2><span class="num">05</span> Sharing</h2>
+    <p>We don't sell, rent, or share any data, because there isn't any personal data to share. The champion dataset is sourced from Riot Games' public Data Dragon assets; using it doesn't send any information about you to Riot.</p>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">06</span> Children's privacy</h2>
+    <p>Riftdle doesn't collect personal information from anyone, including children, since there's no account system or identity data of any kind involved.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">07</span> Changes</h2>
+    <p>If what the game stores or sends ever changes, this page will be updated and the date at the top will change accordingly.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">08</span> Contact</h2>
+    <p>Questions about this policy can be raised as an issue on the <a href="https://github.com/ethansinclair1/riftdle" target="_blank" rel="noopener">GitHub repository</a>.</p>
+  </section>
+
+  <footer>
+    Riftdle is an independent hobby project and is not affiliated with or endorsed by Riot Games or Discord Inc.
+  </footer>
+</div>
+</body>
+</html>

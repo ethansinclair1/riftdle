@@ -80,7 +80,10 @@ function ordinal(n: number): string {
 }
 
 function iconUrl(c: Champion): string {
-  return `https://ddragon.leagueoflegends.com/cdn/${c.ddragonVersion}/img/champion/${c.icon}`;
+  // Self-hosted (see public/icons) rather than hotlinked from Riot's CDN -
+  // Discord Activities sandbox cross-origin requests, so a third-party image
+  // host would just render blank inside Discord.
+  return `${import.meta.env.BASE_URL}icons/${c.icon}`;
 }
 
 function todayIndex(): number {
@@ -309,7 +312,11 @@ export default function App() {
 
   return (
     <>
-      <div className="bg-image" aria-hidden="true" />
+      <div
+        className="bg-image"
+        aria-hidden="true"
+        style={{ backgroundImage: `url(${import.meta.env.BASE_URL}bg/aatrox.jpg)` }}
+      />
       <div className="bg-scrim" aria-hidden="true" />
       <div className="page">
       <header className="topbar">
@@ -322,7 +329,6 @@ export default function App() {
         </button>
       </header>
 
-      <p className="subhead">One champion a day. Six tries. Guess wisely.</p>
       {liveCount != null && (
         <p className="live-count">
           <strong>{liveCount.toLocaleString()}</strong> summoners have found today's champion
@@ -362,9 +368,6 @@ export default function App() {
               ))}
             </ul>
           )}
-        </div>
-        <div className="tries-left">
-          {outcome === "playing" ? `${MAX_GUESSES - guesses.length} guesses left` : `Guessed today — see you tomorrow`}
         </div>
       </div>
 

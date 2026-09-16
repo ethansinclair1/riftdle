@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riftdle Terms of Service</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f4f5f8;
+    --panel: #ffffff;
+    --border: #dcdfe6;
+    --text: #1b1d27;
+    --muted: #5a5f72;
+    --accent: #0d8f85;
+    --rule: #e4e6ec;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0d;
+      --panel: #121319;
+      --border: #2a2c38;
+      --text: #eef0f6;
+      --muted: #8c90a4;
+      --accent: #2fe6d6;
+      --rule: #23252f;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Newsreader", Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .wrap { max-width: 700px; margin: 0 auto; padding: 64px 24px 120px; }
+
+  header.doc-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 18px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .brand a { color: var(--text); text-decoration: none; }
+
+  .updated {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-size: clamp(2.2rem, 5vw, 3.1rem);
+    line-height: 1.05;
+    margin: 28px 0 12px;
+    text-wrap: balance;
+  }
+
+  .lede {
+    color: var(--muted);
+    font-size: 1.05rem;
+    font-style: italic;
+    max-width: 60ch;
+    margin: 0 0 32px;
+  }
+
+  .doc-links {
+    display: flex;
+    gap: 8px;
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+  }
+
+  .doc-links a { color: var(--muted); text-decoration: none; border-bottom: 1px solid transparent; }
+  .doc-links a[aria-current="page"] { color: var(--accent); }
+  .doc-links a:hover, .doc-links a:focus-visible { border-bottom-color: var(--accent); }
+
+  nav.toc {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 56px;
+  }
+
+  nav.toc p {
+    font-family: "Oswald", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+
+  nav.toc ol { columns: 2; margin: 0; padding-left: 1.3em; font-size: 0.92rem; }
+  nav.toc a { color: var(--text); text-decoration: none; border-bottom: 1px solid transparent; }
+  nav.toc a:hover, nav.toc a:focus-visible { border-bottom-color: var(--accent); }
+
+  section { margin-bottom: 44px; scroll-margin-top: 24px; }
+
+  h2 {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h2 .num { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 0.85em; }
+
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 14px; padding-left: 1.3em; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--text); }
+  a { color: var(--accent); }
+
+  footer {
+    margin-top: 72px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+    .wrap { padding: 40px 18px 90px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="doc-head">
+    <div class="brand">◈ <a href="./">RIFTDLE</a></div>
+    <div class="updated">Effective September 16, 2026</div>
+  </header>
+
+  <h1>Terms of Service</h1>
+  <p class="lede">The plain-language rules for playing Riftdle, whether you found it as a Discord Activity or on the web.</p>
+
+  <div class="doc-links">
+    <a href="terms.html" aria-current="page">Terms of Service</a>
+    <span>·</span>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#acceptance">Acceptance of terms</a></li>
+      <li><a href="#service">What Riftdle is</a></li>
+      <li><a href="#access">Access</a></li>
+      <li><a href="#conduct">Acceptable use</a></li>
+      <li><a href="#warranty">No warranty</a></li>
+      <li><a href="#liability">Limitation of liability</a></li>
+      <li><a href="#changes">Changes</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#law">Governing law</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="acceptance">
+    <h2><span class="num">01</span> Acceptance of terms</h2>
+    <p>By opening Riftdle — as a Discord Activity or at its web address — you agree to these terms. If you don't agree, don't use it. These terms sit alongside Discord's own Terms of Service, which govern your use of Discord itself.</p>
+  </section>
+
+  <section id="service">
+    <h2><span class="num">02</span> What Riftdle is</h2>
+    <p>Riftdle is a free, single-player daily guessing game: one League of Legends champion a day, six tries, color-coded hints. It's a hobby project, not a commercial product — nothing to buy, no ads, no subscriptions.</p>
+  </section>
+
+  <section id="access">
+    <h2><span class="num">03</span> Access</h2>
+    <p>There's no account system and nothing to sign in to. When launched as a Discord Activity, the game does the minimum handshake Discord requires to display it in the client — it does not read your Discord identity, name, or any personal information. See the <a href="privacy.html">Privacy Policy</a> for exactly what the game does track.</p>
+  </section>
+
+  <section id="conduct">
+    <h2><span class="num">04</span> Acceptable use</h2>
+    <p>Play fair. Specifically, don't:</p>
+    <ul>
+      <li>Automate or script guesses against the game or its counter</li>
+      <li>Try to spam, abuse, or overload the daily counter endpoint</li>
+      <li>Try to disrupt, overload, or reverse-engineer the service</li>
+    </ul>
+    <p>Breaking these is grounds for us blocking access, per <a href="#termination">Termination</a> below.</p>
+  </section>
+
+  <section id="warranty">
+    <h2><span class="num">05</span> No warranty</h2>
+    <p>Riftdle is provided <strong>as-is</strong>, free of charge, run on ordinary hosting infrastructure. We don't promise it'll always be available, bug-free, or fast — a free-tier server can go to sleep, restart, or fall over. Treat it accordingly.</p>
+  </section>
+
+  <section id="liability">
+    <h2><span class="num">06</span> Limitation of liability</h2>
+    <p>To the fullest extent the law allows, we aren't liable for any damage or loss arising from your use of Riftdle — direct, indirect, or otherwise. You use it at your own risk.</p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">07</span> Changes</h2>
+    <p>We may update these terms, or the game itself, at any time. Meaningful changes to these terms will update the date at the top of this page. Continuing to play after a change means you accept the new terms.</p>
+  </section>
+
+  <section id="termination">
+    <h2><span class="num">08</span> Termination</h2>
+    <p>We can restrict or block access to Riftdle at any time, for any reason — most commonly for the conduct described in <a href="#conduct">Acceptable use</a>. Since there's no account, this typically just means blocking a source of abusive traffic.</p>
+  </section>
+
+  <section id="law">
+    <h2><span class="num">09</span> Governing law</h2>
+    <p>These terms are governed by the laws applicable in your place of residence, to the extent those laws apply to a free, non-commercial hobby project like this one.</p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">10</span> Contact</h2>
+    <p>Questions about these terms, or the game itself, can be raised as an issue on the <a href="https://github.com/ethansinclair1/riftdle" target="_blank" rel="noopener">GitHub repository</a>.</p>
+  </section>
+
+  <footer>
+    Riftdle is an independent hobby project and is not affiliated with or endorsed by Riot Games or Discord Inc.
+  </footer>
+</div>
+</body>
+</html>
