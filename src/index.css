@@ -1,22 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600;700&display=swap");
 
 :root {
   color-scheme: dark;
   --bg: #05060a;
   --bg-2: #0a0c14;
   --panel: #0d101a;
-  --panel-2: #12162280;
   --border: #1c2130;
   --text: #e8ecf4;
   --muted: #6b7288;
   --accent: #2fe6d6;
   --accent-ink: #04211d;
-  --accent-2: #ff3d81;
-  --correct: #35d675;
-  --correct-ink: #06210f;
-  --partial: #ffb02e;
-  --partial-ink: #2b1900;
-  --wrong: #1c2130;
+  --correct: #1fae5a;
+  --correct-bright: #35d675;
+  --partial: #d68a1a;
+  --partial-bright: #ffb02e;
+  --wrong: #c23a5a;
+  --wrong-bright: #ff5b82;
+  --empty-border: #262b3c;
 }
 
 * {
@@ -38,7 +38,7 @@ body {
   position: relative;
   max-width: 900px;
   margin: 0 auto;
-  padding: 28px 18px 80px;
+  padding: 28px 18px 90px;
   min-height: 100vh;
 }
 
@@ -101,13 +101,25 @@ body {
 .subhead {
   color: var(--muted);
   font-size: 0.95rem;
-  margin: 18px 0 24px;
+  margin: 18px 0 4px;
+}
+
+.live-count {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.live-count strong {
+  color: var(--partial-bright);
 }
 
 .guess-box {
   position: relative;
   z-index: 3;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .input-wrap {
@@ -206,50 +218,27 @@ input::placeholder {
   border: 1px solid var(--border);
 }
 
-.win-banner {
-  background: linear-gradient(90deg, rgba(53, 214, 117, 0.12), transparent);
-  border: 1px solid var(--correct);
-  border-radius: 2px;
-  padding: 16px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 24px;
-}
-
-.win-banner strong {
-  color: var(--correct);
-}
-
-.share-btn {
-  background: none;
-  border: 1px solid var(--correct);
-  color: var(--correct);
+.tries-left {
   font-family: "Chakra Petch", sans-serif;
-  font-weight: 600;
+  font-size: 0.72rem;
   letter-spacing: 0.06em;
-  padding: 8px 16px;
-  cursor: pointer;
-  border-radius: 2px;
-}
-
-.share-btn:hover {
-  background: rgba(53, 214, 117, 0.12);
+  color: var(--muted);
+  text-transform: uppercase;
+  margin: 8px 2px 20px;
 }
 
 .grid-scroll {
   overflow-x: auto;
   border: 1px solid var(--border);
   border-radius: 2px;
+  margin-bottom: 28px;
 }
 
 .grid-header,
 .grid-row {
   display: grid;
-  grid-template-columns: 160px repeat(6, minmax(120px, 1fr));
-  min-width: 900px;
+  grid-template-columns: 170px repeat(6, minmax(126px, 1fr));
+  min-width: 940px;
 }
 
 .grid-header {
@@ -273,6 +262,10 @@ input::placeholder {
   border-top: none;
 }
 
+.row-win {
+  animation: win-flash 1s ease;
+}
+
 .col-champ {
   position: sticky;
   left: 0;
@@ -284,43 +277,72 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.92rem;
+}
+
+.try-index {
+  font-family: "IBM Plex Mono", monospace;
+  color: var(--muted);
+  font-size: 0.75rem;
+  width: 16px;
+  flex-shrink: 0;
 }
 
 .champ-cell img {
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   border-radius: 4px;
   border: 1px solid var(--border);
+}
+
+.empty-champ {
+  color: var(--muted);
+}
+
+.empty-dot {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px dashed var(--empty-border);
 }
 
 .cell {
   display: flex;
   align-items: center;
-  padding: 10px 12px;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 10px 14px;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.82rem;
+  font-weight: 600;
+  font-size: 0.84rem;
   border-left: 1px solid var(--border);
 }
 
 .cell-correct {
-  background: rgba(53, 214, 117, 0.16);
-  color: var(--correct);
+  background: var(--correct);
+  color: #eafff0;
 }
 
 .cell-partial {
-  background: rgba(255, 176, 46, 0.14);
-  color: var(--partial);
+  background: var(--partial);
+  color: #2b1900;
 }
 
 .cell-wrong {
-  color: var(--muted);
+  background: var(--wrong);
+  color: #ffeef2;
 }
 
-.arrow {
-  font-size: 0.75rem;
+.cell-empty {
+  background: transparent;
+  border-left: 1px solid var(--border);
+}
+
+.big-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 .toast {
@@ -334,14 +356,232 @@ input::placeholder {
   padding: 10px 18px;
   border-radius: 2px;
   font-size: 0.85rem;
-  z-index: 10;
+  z-index: 20;
 }
 
 .foot {
-  margin-top: 48px;
+  margin-top: 40px;
   color: var(--muted);
   font-size: 0.75rem;
   text-align: center;
+}
+
+/* ---------- legend ---------- */
+
+.legend {
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 16px 18px;
+  background: var(--panel);
+}
+
+.legend-title {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.swatch.correct {
+  background: var(--correct);
+}
+
+.swatch.partial {
+  background: var(--partial);
+}
+
+.swatch.wrong {
+  background: var(--wrong);
+}
+
+.arrow-swatch {
+  color: #ffeef2;
+  font-weight: 700;
+}
+
+/* ---------- modal ---------- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 3, 6, 0.78);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 30;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background: var(--panel);
+  border: 2px solid var(--correct-bright);
+  border-radius: 4px;
+  padding: 32px 28px 26px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(53, 214, 117, 0.25);
+}
+
+.modal-lose {
+  border-color: var(--wrong-bright);
+  box-shadow: 0 0 40px rgba(255, 91, 130, 0.22);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.modal-close:hover {
+  color: var(--text);
+}
+
+.modal-title {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 1.7rem;
+  margin: 0 0 20px;
+  color: var(--correct-bright);
+}
+
+.modal-lose .modal-title {
+  color: var(--wrong-bright);
+}
+
+.modal-champ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.modal-champ img {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  border: 2px solid var(--border);
+}
+
+.modal-sub {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-align: left;
+}
+
+.modal-name {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.modal-line {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.modal-line strong {
+  color: var(--text);
+}
+
+.share-btn {
+  background: none;
+  border: 1px solid var(--correct-bright);
+  color: var(--correct-bright);
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.modal-lose .share-btn {
+  border-color: var(--wrong-bright);
+  color: var(--wrong-bright);
+}
+
+.share-btn:hover {
+  background: rgba(53, 214, 117, 0.12);
+}
+
+.share-btn.wide {
+  width: 100%;
+}
+
+.modal-countdown {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+}
+
+.countdown-label {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.countdown-time {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+}
+
+@keyframes win-flash {
+  0% {
+    background: rgba(53, 214, 117, 0.35);
+  }
+  100% {
+    background: transparent;
+  }
 }
 
 @media (max-width: 640px) {
@@ -352,5 +592,9 @@ input::placeholder {
 
   .brand {
     font-size: 1.3rem;
+  }
+
+  .legend-items {
+    gap: 12px 16px;
   }
 }
