@@ -1,0 +1,3264 @@
+[
+{
+"id": "Aatrox",
+"name": "Aatrox",
+"title": "the Darkin Blade",
+"icon": "Aatrox.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "BLOOD_WELL",
+"attackType": "MELEE",
+"faction": "unaffiliated",
+"releaseYear": 2013
+},
+{
+"id": "Ahri",
+"name": "Ahri",
+"title": "the Nine-Tailed Fox",
+"icon": "Ahri.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"BURST",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2011
+},
+{
+"id": "Akali",
+"name": "Akali",
+"title": "the Rogue Assassin",
+"icon": "Akali.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN"
+],
+"resource": "ENERGY",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2010
+},
+{
+"id": "Akshan",
+"name": "Akshan",
+"title": "the Rogue Sentinel",
+"icon": "Akshan.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shurima",
+"releaseYear": 2021
+},
+{
+"id": "Alistar",
+"name": "Alistar",
+"title": "the Minotaur",
+"icon": "Alistar.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"SUPPORT",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "unaffiliated",
+"releaseYear": 2009
+},
+{
+"id": "Ambessa",
+"name": "Ambessa",
+"title": "Matriarch of War",
+"icon": "Ambessa.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "ENERGY",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2024
+},
+{
+"id": "Amumu",
+"name": "Amumu",
+"title": "the Sad Mummy",
+"icon": "Amumu.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"SUPPORT"
+],
+"roles": [
+"SUPPORT",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shurima",
+"releaseYear": 2009
+},
+{
+"id": "Anivia",
+"name": "Anivia",
+"title": "the Cryophoenix",
+"icon": "Anivia.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BATTLEMAGE",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "freljord",
+"releaseYear": 2009
+},
+{
+"id": "Annie",
+"name": "Annie",
+"title": "the Dark Child",
+"icon": "Annie.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BURST",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2009
+},
+{
+"id": "Aphelios",
+"name": "Aphelios",
+"title": "the Weapon of the Faithful",
+"icon": "Aphelios.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "mount-targon",
+"releaseYear": 2019
+},
+{
+"id": "Ashe",
+"name": "Ashe",
+"title": "the Frost Archer",
+"icon": "Ashe.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"SUPPORT"
+],
+"roles": [
+"MARKSMAN",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "freljord",
+"releaseYear": 2009
+},
+{
+"id": "AurelionSol",
+"name": "Aurelion Sol",
+"title": "The Star Forger",
+"icon": "AurelionSol.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BATTLEMAGE",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2016
+},
+{
+"id": "Aurora",
+"name": "Aurora",
+"title": "the Witch Between Worlds",
+"icon": "Aurora.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"BURST",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "freljord",
+"releaseYear": 2024
+},
+{
+"id": "Azir",
+"name": "Azir",
+"title": "the Emperor of the Sands",
+"icon": "Azir.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"MAGE",
+"MARKSMAN",
+"SPECIALIST"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shurima",
+"releaseYear": 2014
+},
+{
+"id": "Bard",
+"name": "Bard",
+"title": "the Wandering Caretaker",
+"icon": "Bard.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"CATCHER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2015
+},
+{
+"id": "Belveth",
+"name": "Bel'Veth",
+"title": "the Empress of the Void",
+"icon": "Belveth.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "NONE",
+"attackType": "MELEE",
+"faction": "void",
+"releaseYear": 2022
+},
+{
+"id": "Blitzcrank",
+"name": "Blitzcrank",
+"title": "the Great Steam Golem",
+"icon": "Blitzcrank.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"CATCHER",
+"SUPPORT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "zaun",
+"releaseYear": 2009
+},
+{
+"id": "Brand",
+"name": "Brand",
+"title": "the Burning Vengeance",
+"icon": "Brand.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"BURST",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2011
+},
+{
+"id": "Braum",
+"name": "Braum",
+"title": "the Heart of the Freljord",
+"icon": "Braum.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"SUPPORT",
+"TANK",
+"WARDEN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2014
+},
+{
+"id": "Briar",
+"name": "Briar",
+"title": "the Restrained Hunger",
+"icon": "Briar.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER"
+],
+"resource": "FRENZY",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2023
+},
+{
+"id": "Caitlyn",
+"name": "Caitlyn",
+"title": "the Sheriff of Piltover",
+"icon": "Caitlyn.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "piltover",
+"releaseYear": 2011
+},
+{
+"id": "Camille",
+"name": "Camille",
+"title": "the Steel Shadow",
+"icon": "Camille.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "piltover",
+"releaseYear": 2016
+},
+{
+"id": "Cassiopeia",
+"name": "Cassiopeia",
+"title": "the Serpent's Embrace",
+"icon": "Cassiopeia.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BATTLEMAGE",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "noxus",
+"releaseYear": 2010
+},
+{
+"id": "Chogath",
+"name": "Cho'Gath",
+"title": "the Terror of the Void",
+"icon": "Chogath.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"MAGE",
+"SPECIALIST",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "void",
+"releaseYear": 2009
+},
+{
+"id": "Corki",
+"name": "Corki",
+"title": "the Daring Bombardier",
+"icon": "Corki.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bandle-city",
+"releaseYear": 2009
+},
+{
+"id": "Darius",
+"name": "Darius",
+"title": "the Hand of Noxus",
+"icon": "Darius.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2012
+},
+{
+"id": "Diana",
+"name": "Diana",
+"title": "Scorn of the Moon",
+"icon": "Diana.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "mount-targon",
+"releaseYear": 2012
+},
+{
+"id": "DrMundo",
+"name": "Dr. Mundo",
+"title": "the Madman of Zaun",
+"icon": "DrMundo.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "HEALTH",
+"attackType": "MELEE",
+"faction": "zaun",
+"releaseYear": 2009
+},
+{
+"id": "Draven",
+"name": "Draven",
+"title": "the Glorious Executioner",
+"icon": "Draven.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "noxus",
+"releaseYear": 2012
+},
+{
+"id": "Ekko",
+"name": "Ekko",
+"title": "the Boy Who Shattered Time",
+"icon": "Ekko.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "zaun",
+"releaseYear": 2015
+},
+{
+"id": "Elise",
+"name": "Elise",
+"title": "the Spider Queen",
+"icon": "Elise.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shadow-isles",
+"releaseYear": 2012
+},
+{
+"id": "Evelynn",
+"name": "Evelynn",
+"title": "Agony's Embrace",
+"icon": "Evelynn.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "unaffiliated",
+"releaseYear": 2009
+},
+{
+"id": "Ezreal",
+"name": "Ezreal",
+"title": "the Prodigal Explorer",
+"icon": "Ezreal.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "piltover",
+"releaseYear": 2010
+},
+{
+"id": "Fiddlesticks",
+"name": "Fiddlesticks",
+"title": "the Ancient Fear",
+"icon": "Fiddlesticks.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"MAGE",
+"SPECIALIST",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2009
+},
+{
+"id": "Fiora",
+"name": "Fiora",
+"title": "the Grand Duelist",
+"icon": "Fiora.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2012
+},
+{
+"id": "Fizz",
+"name": "Fizz",
+"title": "the Tidal Trickster",
+"icon": "Fizz.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "unaffiliated",
+"releaseYear": 2011
+},
+{
+"id": "Galio",
+"name": "Galio",
+"title": "the Colossus",
+"icon": "Galio.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"MAGE",
+"TANK",
+"WARDEN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2010
+},
+{
+"id": "Gangplank",
+"name": "Gangplank",
+"title": "the Saltwater Scourge",
+"icon": "Gangplank.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"SPECIALIST"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "bilgewater",
+"releaseYear": 2009
+},
+{
+"id": "Garen",
+"name": "Garen",
+"title": "The Might of Demacia",
+"icon": "Garen.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "NONE",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2010
+},
+{
+"id": "Gnar",
+"name": "Gnar",
+"title": "the Missing Link",
+"icon": "Gnar.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"SPECIALIST",
+"TANK"
+],
+"resource": "RAGE",
+"attackType": "RANGED",
+"faction": "freljord",
+"releaseYear": 2014
+},
+{
+"id": "Gragas",
+"name": "Gragas",
+"title": "the Rabble Rouser",
+"icon": "Gragas.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"MAGE",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2010
+},
+{
+"id": "Graves",
+"name": "Graves",
+"title": "the Outlaw",
+"icon": "Graves.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"MARKSMAN",
+"SPECIALIST"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bilgewater",
+"releaseYear": 2011
+},
+{
+"id": "Gwen",
+"name": "Gwen",
+"title": "The Hallowed Seamstress",
+"icon": "Gwen.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shadow-isles",
+"releaseYear": 2021
+},
+{
+"id": "Hecarim",
+"name": "Hecarim",
+"title": "the Shadow of War",
+"icon": "Hecarim.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"DIVER",
+"FIGHTER",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shadow-isles",
+"releaseYear": 2012
+},
+{
+"id": "Heimerdinger",
+"name": "Heimerdinger",
+"title": "the Revered Inventor",
+"icon": "Heimerdinger.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"MAGE",
+"SPECIALIST",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "piltover",
+"releaseYear": 2009
+},
+{
+"id": "Hwei",
+"name": "Hwei",
+"title": "the Visionary",
+"icon": "Hwei.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"ARTILLERY",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2023
+},
+{
+"id": "Illaoi",
+"name": "Illaoi",
+"title": "the Kraken Priestess",
+"icon": "Illaoi.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "bilgewater",
+"releaseYear": 2015
+},
+{
+"id": "Irelia",
+"name": "Irelia",
+"title": "the Blade Dancer",
+"icon": "Irelia.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2010
+},
+{
+"id": "Ivern",
+"name": "Ivern",
+"title": "the Green Father",
+"icon": "Ivern.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"CATCHER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2016
+},
+{
+"id": "Janna",
+"name": "Janna",
+"title": "the Storm's Fury",
+"icon": "Janna.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "zaun",
+"releaseYear": 2009
+},
+{
+"id": "JarvanIV",
+"name": "Jarvan IV",
+"title": "the Exemplar of Demacia",
+"icon": "JarvanIV.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"DIVER",
+"FIGHTER",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2011
+},
+{
+"id": "Jax",
+"name": "Jax",
+"title": "Grandmaster at Arms",
+"icon": "Jax.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "unaffiliated",
+"releaseYear": 2009
+},
+{
+"id": "Jayce",
+"name": "Jayce",
+"title": "the Defender of Tomorrow",
+"icon": "Jayce.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"ARTILLERY",
+"FIGHTER",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "piltover",
+"releaseYear": 2012
+},
+{
+"id": "Jhin",
+"name": "Jhin",
+"title": "the Virtuoso",
+"icon": "Jhin.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"CATCHER",
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2016
+},
+{
+"id": "Jinx",
+"name": "Jinx",
+"title": "the Loose Cannon",
+"icon": "Jinx.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "zaun",
+"releaseYear": 2013
+},
+{
+"id": "KSante",
+"name": "K'Sante",
+"title": "the Pride of Nazumah",
+"icon": "KSante.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"SKIRMISHER",
+"TANK",
+"WARDEN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shurima",
+"releaseYear": 2022
+},
+{
+"id": "Kaisa",
+"name": "Kai'Sa",
+"title": "Daughter of the Void",
+"icon": "Kaisa.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "void",
+"releaseYear": 2018
+},
+{
+"id": "Kalista",
+"name": "Kalista",
+"title": "the Spear of Vengeance",
+"icon": "Kalista.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shadow-isles",
+"releaseYear": 2014
+},
+{
+"id": "Karma",
+"name": "Karma",
+"title": "the Enlightened One",
+"icon": "Karma.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"BURST",
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2011
+},
+{
+"id": "Karthus",
+"name": "Karthus",
+"title": "the Deathsinger",
+"icon": "Karthus.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"BATTLEMAGE",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shadow-isles",
+"releaseYear": 2009
+},
+{
+"id": "Kassadin",
+"name": "Kassadin",
+"title": "the Void Walker",
+"icon": "Kassadin.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "void",
+"releaseYear": 2009
+},
+{
+"id": "Katarina",
+"name": "Katarina",
+"title": "the Sinister Blade",
+"icon": "Katarina.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"MAGE"
+],
+"resource": "NONE",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2009
+},
+{
+"id": "Kayle",
+"name": "Kayle",
+"title": "the Righteous",
+"icon": "Kayle.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"MAGE",
+"MARKSMAN",
+"SPECIALIST"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2009
+},
+{
+"id": "Kayn",
+"name": "Kayn",
+"title": "the Shadow Reaper",
+"icon": "Kayn.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2017
+},
+{
+"id": "Kennen",
+"name": "Kennen",
+"title": "the Heart of the Tempest",
+"icon": "Kennen.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"MAGE",
+"MARKSMAN",
+"SPECIALIST"
+],
+"resource": "ENERGY",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2010
+},
+{
+"id": "Khazix",
+"name": "Kha'Zix",
+"title": "the Voidreaver",
+"icon": "Khazix.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "void",
+"releaseYear": 2012
+},
+{
+"id": "Kindred",
+"name": "Kindred",
+"title": "The Eternal Hunters",
+"icon": "Kindred.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2015
+},
+{
+"id": "Kled",
+"name": "Kled",
+"title": "the Cantankerous Cavalier",
+"icon": "Kled.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"SKIRMISHER",
+"TANK"
+],
+"resource": "COURAGE",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2016
+},
+{
+"id": "KogMaw",
+"name": "Kog'Maw",
+"title": "the Mouth of the Abyss",
+"icon": "KogMaw.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "void",
+"releaseYear": 2010
+},
+{
+"id": "Leblanc",
+"name": "LeBlanc",
+"title": "the Deceiver",
+"icon": "Leblanc.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"BURST",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "noxus",
+"releaseYear": 2010
+},
+{
+"id": "LeeSin",
+"name": "Lee Sin",
+"title": "the Blind Monk",
+"icon": "LeeSin.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER"
+],
+"resource": "ENERGY",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2011
+},
+{
+"id": "Leona",
+"name": "Leona",
+"title": "the Radiant Dawn",
+"icon": "Leona.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"SUPPORT",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "mount-targon",
+"releaseYear": 2011
+},
+{
+"id": "Lillia",
+"name": "Lillia",
+"title": "the Bashful Bloom",
+"icon": "Lillia.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"FIGHTER",
+"MAGE",
+"SKIRMISHER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2020
+},
+{
+"id": "Lissandra",
+"name": "Lissandra",
+"title": "the Ice Witch",
+"icon": "Lissandra.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BURST",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "freljord",
+"releaseYear": 2013
+},
+{
+"id": "Lucian",
+"name": "Lucian",
+"title": "the Purifier",
+"icon": "Lucian.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"ASSASSIN",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2013
+},
+{
+"id": "Lulu",
+"name": "Lulu",
+"title": "the Fae Sorceress",
+"icon": "Lulu.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bandle-city",
+"releaseYear": 2012
+},
+{
+"id": "Lux",
+"name": "Lux",
+"title": "the Lady of Luminosity",
+"icon": "Lux.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"ARTILLERY",
+"BURST",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "demacia",
+"releaseYear": 2010
+},
+{
+"id": "Malphite",
+"name": "Malphite",
+"title": "Shard of the Monolith",
+"icon": "Malphite.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"MAGE",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ixtal",
+"releaseYear": 2009
+},
+{
+"id": "Malzahar",
+"name": "Malzahar",
+"title": "the Prophet of the Void",
+"icon": "Malzahar.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"BATTLEMAGE",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "void",
+"releaseYear": 2010
+},
+{
+"id": "Maokai",
+"name": "Maokai",
+"title": "the Twisted Treant",
+"icon": "Maokai.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"SUPPORT"
+],
+"roles": [
+"SUPPORT",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shadow-isles",
+"releaseYear": 2011
+},
+{
+"id": "MasterYi",
+"name": "Master Yi",
+"title": "the Wuju Bladesman",
+"icon": "MasterYi.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2009
+},
+{
+"id": "Mel",
+"name": "Mel",
+"title": "the Soul's Reflection",
+"icon": "Mel.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"ARTILLERY",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "noxus",
+"releaseYear": 2025
+},
+{
+"id": "Milio",
+"name": "Milio",
+"title": "The Gentle Flame",
+"icon": "Milio.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ixtal",
+"releaseYear": 2023
+},
+{
+"id": "MissFortune",
+"name": "Miss Fortune",
+"title": "the Bounty Hunter",
+"icon": "MissFortune.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bilgewater",
+"releaseYear": 2010
+},
+{
+"id": "MonkeyKing",
+"name": "Wukong",
+"title": "the Monkey King",
+"icon": "MonkeyKing.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"DIVER",
+"FIGHTER",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2011
+},
+{
+"id": "Mordekaiser",
+"name": "Mordekaiser",
+"title": "the Iron Revenant",
+"icon": "Mordekaiser.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"MAGE"
+],
+"resource": "SHIELD",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2010
+},
+{
+"id": "Morgana",
+"name": "Morgana",
+"title": "the Fallen",
+"icon": "Morgana.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"CATCHER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "demacia",
+"releaseYear": 2009
+},
+{
+"id": "Naafiri",
+"name": "Naafiri",
+"title": "the Hound of a Hundred Bites",
+"icon": "Naafiri.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shurima",
+"releaseYear": 2023
+},
+{
+"id": "Nami",
+"name": "Nami",
+"title": "the Tidecaller",
+"icon": "Nami.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2012
+},
+{
+"id": "Nasus",
+"name": "Nasus",
+"title": "the Curator of the Sands",
+"icon": "Nasus.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shurima",
+"releaseYear": 2009
+},
+{
+"id": "Nautilus",
+"name": "Nautilus",
+"title": "the Titan of the Depths",
+"icon": "Nautilus.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"SUPPORT",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "bilgewater",
+"releaseYear": 2012
+},
+{
+"id": "Neeko",
+"name": "Neeko",
+"title": "the Curious Chameleon",
+"icon": "Neeko.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"BURST",
+"CATCHER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ixtal",
+"releaseYear": 2018
+},
+{
+"id": "Nidalee",
+"name": "Nidalee",
+"title": "the Bestial Huntress",
+"icon": "Nidalee.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"MAGE",
+"SPECIALIST"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ixtal",
+"releaseYear": 2009
+},
+{
+"id": "Nilah",
+"name": "Nilah",
+"title": "the Joy Unbound",
+"icon": "Nilah.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "bilgewater",
+"releaseYear": 2022
+},
+{
+"id": "Nocturne",
+"name": "Nocturne",
+"title": "the Eternal Nightmare",
+"icon": "Nocturne.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "unaffiliated",
+"releaseYear": 2011
+},
+{
+"id": "Nunu",
+"name": "Nunu & Willump",
+"title": "the Boy and His Yeti",
+"icon": "Nunu.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"MAGE",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2009
+},
+{
+"id": "Olaf",
+"name": "Olaf",
+"title": "the Berserker",
+"icon": "Olaf.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"DIVER",
+"FIGHTER",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2010
+},
+{
+"id": "Orianna",
+"name": "Orianna",
+"title": "the Lady of Clockwork",
+"icon": "Orianna.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BURST",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "piltover",
+"releaseYear": 2011
+},
+{
+"id": "Ornn",
+"name": "Ornn",
+"title": "The Fire below the Mountain",
+"icon": "Ornn.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2017
+},
+{
+"id": "Pantheon",
+"name": "Pantheon",
+"title": "the Unbreakable Spear",
+"icon": "Pantheon.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"MIDDLE",
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "mount-targon",
+"releaseYear": 2010
+},
+{
+"id": "Poppy",
+"name": "Poppy",
+"title": "Keeper of the Hammer",
+"icon": "Poppy.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"TANK",
+"WARDEN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2010
+},
+{
+"id": "Pyke",
+"name": "Pyke",
+"title": "the Bloodharbor Ripper",
+"icon": "Pyke.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ASSASSIN",
+"CATCHER",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "bilgewater",
+"releaseYear": 2018
+},
+{
+"id": "Qiyana",
+"name": "Qiyana",
+"title": "Empress of the Elements",
+"icon": "Qiyana.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ixtal",
+"releaseYear": 2019
+},
+{
+"id": "Quinn",
+"name": "Quinn",
+"title": "Demacia's Wings",
+"icon": "Quinn.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"MARKSMAN",
+"SPECIALIST"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "demacia",
+"releaseYear": 2013
+},
+{
+"id": "Rakan",
+"name": "Rakan",
+"title": "The Charmer",
+"icon": "Rakan.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"CATCHER",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2017
+},
+{
+"id": "Rammus",
+"name": "Rammus",
+"title": "the Armordillo",
+"icon": "Rammus.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"FIGHTER",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shurima",
+"releaseYear": 2009
+},
+{
+"id": "RekSai",
+"name": "Rek'Sai",
+"title": "the Void Burrower",
+"icon": "RekSai.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"DIVER",
+"FIGHTER",
+"TANK"
+],
+"resource": "RAGE",
+"attackType": "MELEE",
+"faction": "void",
+"releaseYear": 2014
+},
+{
+"id": "Rell",
+"name": "Rell",
+"title": "the Iron Maiden",
+"icon": "Rell.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"SUPPORT",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2020
+},
+{
+"id": "Renata",
+"name": "Renata Glasc",
+"title": "the Chem-Baroness",
+"icon": "Renata.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "zaun",
+"releaseYear": 2022
+},
+{
+"id": "Renekton",
+"name": "Renekton",
+"title": "the Butcher of the Sands",
+"icon": "Renekton.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"DIVER",
+"FIGHTER",
+"TANK"
+],
+"resource": "FURY",
+"attackType": "MELEE",
+"faction": "shurima",
+"releaseYear": 2011
+},
+{
+"id": "Rengar",
+"name": "Rengar",
+"title": "the Pridestalker",
+"icon": "Rengar.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER"
+],
+"resource": "FEROCITY",
+"attackType": "MELEE",
+"faction": "ixtal",
+"releaseYear": 2012
+},
+{
+"id": "Riven",
+"name": "Riven",
+"title": "the Exile",
+"icon": "Riven.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "NONE",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2011
+},
+{
+"id": "Rumble",
+"name": "Rumble",
+"title": "the Mechanized Menace",
+"icon": "Rumble.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"BATTLEMAGE",
+"FIGHTER",
+"MAGE"
+],
+"resource": "HEAT",
+"attackType": "MELEE",
+"faction": "bandle-city",
+"releaseYear": 2011
+},
+{
+"id": "Ryze",
+"name": "Ryze",
+"title": "the Rune Mage",
+"icon": "Ryze.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BATTLEMAGE",
+"FIGHTER",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2009
+},
+{
+"id": "Samira",
+"name": "Samira",
+"title": "the Desert Rose",
+"icon": "Samira.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"ASSASSIN",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "noxus",
+"releaseYear": 2020
+},
+{
+"id": "Sejuani",
+"name": "Sejuani",
+"title": "Fury of the North",
+"icon": "Sejuani.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"FIGHTER",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2012
+},
+{
+"id": "Senna",
+"name": "Senna",
+"title": "the Redeemer",
+"icon": "Senna.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MARKSMAN",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2019
+},
+{
+"id": "Seraphine",
+"name": "Seraphine",
+"title": "the Starry-Eyed Songstress",
+"icon": "Seraphine.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"SUPPORT"
+],
+"roles": [
+"BURST",
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "piltover",
+"releaseYear": 2020
+},
+{
+"id": "Sett",
+"name": "Sett",
+"title": "the Boss",
+"icon": "Sett.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "GRIT",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2020
+},
+{
+"id": "Shaco",
+"name": "Shaco",
+"title": "the Demon Jester",
+"icon": "Shaco.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"SUPPORT"
+],
+"roles": [
+"ASSASSIN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "unaffiliated",
+"releaseYear": 2009
+},
+{
+"id": "Shen",
+"name": "Shen",
+"title": "the Eye of Twilight",
+"icon": "Shen.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"TANK",
+"WARDEN"
+],
+"resource": "ENERGY",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2010
+},
+{
+"id": "Shyvana",
+"name": "Shyvana",
+"title": "the Half-Dragon",
+"icon": "Shyvana.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"MAGE"
+],
+"resource": "FURY",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2011
+},
+{
+"id": "Singed",
+"name": "Singed",
+"title": "the Mad Chemist",
+"icon": "Singed.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"MAGE",
+"SPECIALIST",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "zaun",
+"releaseYear": 2009
+},
+{
+"id": "Sion",
+"name": "Sion",
+"title": "The Undead Juggernaut",
+"icon": "Sion.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2009
+},
+{
+"id": "Sivir",
+"name": "Sivir",
+"title": "the Battle Mistress",
+"icon": "Sivir.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shurima",
+"releaseYear": 2009
+},
+{
+"id": "Skarner",
+"name": "Skarner",
+"title": "the Primordial Sovereign",
+"icon": "Skarner.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK",
+"VANGUARD"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "ixtal",
+"releaseYear": 2011
+},
+{
+"id": "Smolder",
+"name": "Smolder",
+"title": "the Fiery Fledgling",
+"icon": "Smolder.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2024
+},
+{
+"id": "Sona",
+"name": "Sona",
+"title": "Maven of the Strings",
+"icon": "Sona.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "demacia",
+"releaseYear": 2010
+},
+{
+"id": "Soraka",
+"name": "Soraka",
+"title": "the Starchild",
+"icon": "Soraka.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "mount-targon",
+"releaseYear": 2009
+},
+{
+"id": "Swain",
+"name": "Swain",
+"title": "the Noxian Grand General",
+"icon": "Swain.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"BATTLEMAGE",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "noxus",
+"releaseYear": 2010
+},
+{
+"id": "Sylas",
+"name": "Sylas",
+"title": "the Unshackled",
+"icon": "Sylas.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"BURST",
+"MAGE",
+"SKIRMISHER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2019
+},
+{
+"id": "Syndra",
+"name": "Syndra",
+"title": "the Dark Sovereign",
+"icon": "Syndra.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BURST",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2012
+},
+{
+"id": "TahmKench",
+"name": "Tahm Kench",
+"title": "The River King",
+"icon": "TahmKench.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"SUPPORT",
+"TANK",
+"WARDEN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "unaffiliated",
+"releaseYear": 2015
+},
+{
+"id": "Taliyah",
+"name": "Taliyah",
+"title": "the Stoneweaver",
+"icon": "Taliyah.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"MIDDLE"
+],
+"roles": [
+"BATTLEMAGE",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shurima",
+"releaseYear": 2016
+},
+{
+"id": "Talon",
+"name": "Talon",
+"title": "the Blade's Shadow",
+"icon": "Talon.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "noxus",
+"releaseYear": 2011
+},
+{
+"id": "Taric",
+"name": "Taric",
+"title": "the Shield of Valoran",
+"icon": "Taric.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"SUPPORT",
+"TANK",
+"WARDEN"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "mount-targon",
+"releaseYear": 2009
+},
+{
+"id": "Teemo",
+"name": "Teemo",
+"title": "the Swift Scout",
+"icon": "Teemo.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"MAGE",
+"MARKSMAN",
+"SPECIALIST"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bandle-city",
+"releaseYear": 2009
+},
+{
+"id": "Thresh",
+"name": "Thresh",
+"title": "the Chain Warden",
+"icon": "Thresh.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"CATCHER",
+"SUPPORT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shadow-isles",
+"releaseYear": 2013
+},
+{
+"id": "Tristana",
+"name": "Tristana",
+"title": "the Yordle Gunner",
+"icon": "Tristana.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bandle-city",
+"releaseYear": 2009
+},
+{
+"id": "Trundle",
+"name": "Trundle",
+"title": "the Troll King",
+"icon": "Trundle.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2010
+},
+{
+"id": "Tryndamere",
+"name": "Tryndamere",
+"title": "the Barbarian King",
+"icon": "Tryndamere.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "FURY",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2009
+},
+{
+"id": "TwistedFate",
+"name": "Twisted Fate",
+"title": "the Card Master",
+"icon": "TwistedFate.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"BURST",
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bilgewater",
+"releaseYear": 2009
+},
+{
+"id": "Twitch",
+"name": "Twitch",
+"title": "the Plague Rat",
+"icon": "Twitch.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"SUPPORT"
+],
+"roles": [
+"ASSASSIN",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "zaun",
+"releaseYear": 2009
+},
+{
+"id": "Udyr",
+"name": "Udyr",
+"title": "the Spirit Walker",
+"icon": "Udyr.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2009
+},
+{
+"id": "Urgot",
+"name": "Urgot",
+"title": "the Dreadnought",
+"icon": "Urgot.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "zaun",
+"releaseYear": 2010
+},
+{
+"id": "Varus",
+"name": "Varus",
+"title": "the Arrow of Retribution",
+"icon": "Varus.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"ARTILLERY",
+"MAGE",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2012
+},
+{
+"id": "Vayne",
+"name": "Vayne",
+"title": "the Night Hunter",
+"icon": "Vayne.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "demacia",
+"releaseYear": 2011
+},
+{
+"id": "Veigar",
+"name": "Veigar",
+"title": "the Tiny Master of Evil",
+"icon": "Veigar.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"BURST",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bandle-city",
+"releaseYear": 2009
+},
+{
+"id": "Velkoz",
+"name": "Vel'Koz",
+"title": "the Eye of the Void",
+"icon": "Velkoz.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"ARTILLERY",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "void",
+"releaseYear": 2014
+},
+{
+"id": "Vex",
+"name": "Vex",
+"title": "the Gloomist",
+"icon": "Vex.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BURST",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shadow-isles",
+"releaseYear": 2021
+},
+{
+"id": "Vi",
+"name": "Vi",
+"title": "the Piltover Enforcer",
+"icon": "Vi.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"DIVER",
+"FIGHTER"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "piltover",
+"releaseYear": 2012
+},
+{
+"id": "Viego",
+"name": "Viego",
+"title": "The Ruined King",
+"icon": "Viego.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "NONE",
+"attackType": "MELEE",
+"faction": "shadow-isles",
+"releaseYear": 2021
+},
+{
+"id": "Viktor",
+"name": "Viktor",
+"title": "the Herald of the Arcane",
+"icon": "Viktor.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BATTLEMAGE",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "zaun",
+"releaseYear": 2011
+},
+{
+"id": "Vladimir",
+"name": "Vladimir",
+"title": "the Crimson Reaper",
+"icon": "Vladimir.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"BATTLEMAGE",
+"FIGHTER",
+"MAGE"
+],
+"resource": "CRIMSON_RUSH",
+"attackType": "RANGED",
+"faction": "noxus",
+"releaseYear": 2010
+},
+{
+"id": "Volibear",
+"name": "Volibear",
+"title": "the Relentless Storm",
+"icon": "Volibear.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "freljord",
+"releaseYear": 2011
+},
+{
+"id": "Warwick",
+"name": "Warwick",
+"title": "the Uncaged Wrath of Zaun",
+"icon": "Warwick.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"TOP"
+],
+"roles": [
+"DIVER",
+"FIGHTER",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "zaun",
+"releaseYear": 2009
+},
+{
+"id": "Xayah",
+"name": "Xayah",
+"title": "the Rebel",
+"icon": "Xayah.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2017
+},
+{
+"id": "Xerath",
+"name": "Xerath",
+"title": "the Magus Ascendant",
+"icon": "Xerath.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"SUPPORT"
+],
+"roles": [
+"ARTILLERY",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "shurima",
+"releaseYear": 2011
+},
+{
+"id": "XinZhao",
+"name": "Xin Zhao",
+"title": "the Seneschal of Demacia",
+"icon": "XinZhao.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE"
+],
+"roles": [
+"DIVER",
+"FIGHTER",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "demacia",
+"releaseYear": 2010
+},
+{
+"id": "Yasuo",
+"name": "Yasuo",
+"title": "the Unforgiven",
+"icon": "Yasuo.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "FLOW",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2013
+},
+{
+"id": "Yone",
+"name": "Yone",
+"title": "the Unforgotten",
+"icon": "Yone.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE",
+"TOP"
+],
+"roles": [
+"ASSASSIN",
+"FIGHTER",
+"SKIRMISHER"
+],
+"resource": "FLOW",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2020
+},
+{
+"id": "Yorick",
+"name": "Yorick",
+"title": "Shepherd of Souls",
+"icon": "Yorick.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"JUGGERNAUT",
+"TANK"
+],
+"resource": "MANA",
+"attackType": "MELEE",
+"faction": "shadow-isles",
+"releaseYear": 2011
+},
+{
+"id": "Yunara",
+"name": "Yunara",
+"title": "the Unbroken Faith",
+"icon": "Yunara.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ionia",
+"releaseYear": 2025
+},
+{
+"id": "Yuumi",
+"name": "Yuumi",
+"title": "the Magical Cat",
+"icon": "Yuumi.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"ENCHANTER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "bandle-city",
+"releaseYear": 2019
+},
+{
+"id": "Zac",
+"name": "Zac",
+"title": "the Secret Weapon",
+"icon": "Zac.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"SUPPORT",
+"TOP"
+],
+"roles": [
+"FIGHTER",
+"TANK",
+"VANGUARD"
+],
+"resource": "HEALTH",
+"attackType": "MELEE",
+"faction": "zaun",
+"releaseYear": 2013
+},
+{
+"id": "Zed",
+"name": "Zed",
+"title": "the Master of Shadows",
+"icon": "Zed.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"JUNGLE",
+"MIDDLE"
+],
+"roles": [
+"ASSASSIN"
+],
+"resource": "ENERGY",
+"attackType": "MELEE",
+"faction": "ionia",
+"releaseYear": 2012
+},
+{
+"id": "Zeri",
+"name": "Zeri",
+"title": "The Spark of Zaun",
+"icon": "Zeri.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM"
+],
+"roles": [
+"MARKSMAN"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "zaun",
+"releaseYear": 2022
+},
+{
+"id": "Ziggs",
+"name": "Ziggs",
+"title": "the Hexplosives Expert",
+"icon": "Ziggs.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"BOTTOM",
+"MIDDLE"
+],
+"roles": [
+"ARTILLERY",
+"MAGE"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "zaun",
+"releaseYear": 2012
+},
+{
+"id": "Zilean",
+"name": "Zilean",
+"title": "the Chronokeeper",
+"icon": "Zilean.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"MAGE",
+"SPECIALIST",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "unaffiliated",
+"releaseYear": 2009
+},
+{
+"id": "Zoe",
+"name": "Zoe",
+"title": "the Aspect of Twilight",
+"icon": "Zoe.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"MIDDLE"
+],
+"roles": [
+"BURST",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "mount-targon",
+"releaseYear": 2017
+},
+{
+"id": "Zyra",
+"name": "Zyra",
+"title": "Rise of the Thorns",
+"icon": "Zyra.png",
+"ddragonVersion": "15.15.1",
+"positions": [
+"SUPPORT"
+],
+"roles": [
+"CATCHER",
+"MAGE",
+"SUPPORT"
+],
+"resource": "MANA",
+"attackType": "RANGED",
+"faction": "ixtal",
+"releaseYear": 2012
+}
+]
