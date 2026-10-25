@@ -149,7 +149,11 @@ function loadStats(): Stats {
 }
 
 function saveStats(s: Stats) {
-  localStorage.setItem(STATS_KEY, JSON.stringify(s));
+  try {
+    localStorage.setItem(STATS_KEY, JSON.stringify(s));
+  } catch {
+    /* storage unavailable (e.g. sandboxed iframe) - keep playing without saving */
+  }
 }
 
 function loadTodayGuesses(day: number, answer: Champion): GuessResult[] {
@@ -167,16 +171,28 @@ function loadTodayGuesses(day: number, answer: Champion): GuessResult[] {
 }
 
 function saveTodayGuesses(day: number, guesses: GuessResult[]) {
-  localStorage.setItem(GUESSES_KEY_PREFIX + day, JSON.stringify(guesses.map((g) => g.champion.id)));
+  try {
+    localStorage.setItem(GUESSES_KEY_PREFIX + day, JSON.stringify(guesses.map((g) => g.champion.id)));
+  } catch {
+    /* ignore */
+  }
 }
 
 function getStoredRank(day: number): number | null {
-  const v = localStorage.getItem(RANK_KEY_PREFIX + day);
-  return v ? parseInt(v, 10) : null;
+  try {
+    const v = localStorage.getItem(RANK_KEY_PREFIX + day);
+    return v ? parseInt(v, 10) : null;
+  } catch {
+    return null;
+  }
 }
 
 function storeRank(day: number, rank: number) {
-  localStorage.setItem(RANK_KEY_PREFIX + day, String(rank));
+  try {
+    localStorage.setItem(RANK_KEY_PREFIX + day, String(rank));
+  } catch {
+    /* ignore */
+  }
 }
 
 async function fetchCount(day: number): Promise<number | null> {
@@ -216,6 +232,9 @@ export default function App() {
   const [toast, setToast] = useState("");
   const [liveCount, setLiveCount] = useState<number | null>(null);
   const [rank, setRank] = useState<number | null>(() => getStoredRank(day));
+  // Champion id of the guess that was just made, so only that row plays the
+  // tile-flip reveal (rows restored from storage on load appear instantly).
+  const [revealId, setRevealId] = useState<string | null>(null);
 
   const outcome: Outcome = guesses.some((g) => g.win) ? "won" : guesses.length >= MAX_GUESSES ? "lost" : "playing";
   const [modalOpen, setModalOpen] = useState(() => outcome !== "playing");
@@ -283,6 +302,7 @@ export default function App() {
     const result = evaluateGuess(champion, answer);
     const next = [...guesses, result];
     setGuesses(next);
+    setRevealId(champion.id);
     saveTodayGuesses(day, next);
     setQuery("");
     setShowSuggestions(false);
@@ -308,7 +328,8 @@ export default function App() {
       .catch(() => setToast("Couldn't copy — no clipboard access"));
   }
 
-  const emptyRows = Math.max(0, MAX_GUESSES - guesses.length);
+  const triesLeft = MAX_GUESSES - guesses.length;
+  const newestFirst = [...guesses].reverse();
 
   return (
     <>
@@ -319,129 +340,190 @@ export default function App() {
       />
       <div className="bg-scrim" aria-hidden="true" />
       <div className="page">
-      <header className="topbar">
-        <div className="brand">
-          <span className="brand-mark">◈</span>
-          Riftdle
-        </div>
-        <button className="stats-btn" onClick={() => setStatsOpen(true)} aria-label="Stats">
-          <BarsIcon />
-        </button>
-      </header>
-
-      {liveCount != null && (
-        <p className="live-count">
-          <strong>{liveCount.toLocaleString()}</strong> summoners have found today's champion
-        </p>
-      )}
-
-      <div className="guess-box">
-        <div className="input-wrap">
-          <input
-            value={query}
-            onChange={(e) => {
-              setQuery(e.target.value);
-              setShowSuggestions(true);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") handleSubmitTyped();
-              if (e.key === "Escape") setShowSuggestions(false);
-            }}
-            onFocus={() => setShowSuggestions(true)}
-            placeholder={outcome !== "playing" ? "Come back tomorrow for a new champion" : "Type a champion name…"}
-            disabled={outcome !== "playing"}
-            autoComplete="off"
-            spellCheck={false}
-          />
-          <button className="go-btn" onClick={handleSubmitTyped} disabled={outcome !== "playing" || !query.trim()}>
-            GUESS
+        <header className="hero">
+          <button className="icon-btn stats-btn" onClick={() => setStatsOpen(true)} aria-label="Stats">
+            <BarsIcon />
           </button>
-          {showSuggestions && suggestions.length > 0 && outcome === "playing" && (
-            <ul className="suggestions">
-              {suggestions.map((c) => (
-                <li key={c.id}>
-                  <button onClick={() => submitGuess(c)}>
-                    <img src={iconUrl(c)} alt="" loading="lazy" />
-                    {c.name}
-                  </button>
-                </li>
-              ))}
-            </ul>
+          <div className="crest" aria-hidden="true">
+            ◈
+          </div>
+          <h1 className="logo">Riftdle</h1>
+          <p className="tagline">Guess today's League of Legends champion</p>
+        </header>
+
+        <section className="frame prompt">
+          <h2 className="prompt-title">
+            {outcome === "won"
+              ? "You found today's champion!"
+              : outcome === "lost"
+              ? "Out of tries for today"
+              : "Guess today's champion!"}
+          </h2>
+          <p className="prompt-sub">
+            {outcome === "playing"
+              ? guesses.length === 0
+                ? "Type any champion to begin."
+                : "Each tile shows how close you are."
+              : "A new champion arrives at midnight."}
+          </p>
+
+          <div className="pips" aria-label={`${triesLeft} tries left`}>
+            {Array.from({ length: MAX_GUESSES }).map((_, i) => {
+              const g = guesses[i];
+              const cls = g ? (g.win ? "pip pip-win" : "pip pip-used") : "pip";
+              return <span className={cls} key={i} />;
+            })}
+            <span className="pips-label">
+              {outcome === "playing" ? `${triesLeft} ${triesLeft === 1 ? "try" : "tries"} left` : ""}
+            </span>
+          </div>
+
+          <div className="guess-box">
+            <div className="input-wrap">
+              <input
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  setShowSuggestions(true);
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleSubmitTyped();
+                  if (e.key === "Escape") setShowSuggestions(false);
+                }}
+                onFocus={() => setShowSuggestions(true)}
+                placeholder={outcome !== "playing" ? "Come back tomorrow for a new champion" : "Type champion name…"}
+                disabled={outcome !== "playing"}
+                autoComplete="off"
+                spellCheck={false}
+              />
+              <button
+                className="go-btn"
+                onClick={handleSubmitTyped}
+                disabled={outcome !== "playing" || !query.trim()}
+                aria-label="Guess"
+              >
+                <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M4 2 L13 8 L4 14 Z" fill="currentColor" />
+                </svg>
+              </button>
+              {showSuggestions && suggestions.length > 0 && outcome === "playing" && (
+                <ul className="suggestions">
+                  {suggestions.map((c) => (
+                    <li key={c.id}>
+                      <button onClick={() => submitGuess(c)}>
+                        <img src={iconUrl(c)} alt="" loading="lazy" />
+                        <span>
+                          <span className="sugg-name">{c.name}</span>
+                          <span className="sugg-title">{c.title}</span>
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+
+          {liveCount != null && (
+            <p className="live-count">
+              <strong>{liveCount.toLocaleString()}</strong> summoners have found today's champion
+            </p>
           )}
-        </div>
-      </div>
+        </section>
 
-      <div className="grid-scroll">
-        <div className="grid-header">
-          <div className="col-champ">CHAMPION</div>
-          <div>POSITION</div>
-          <div>CLASS</div>
-          <div>RESOURCE</div>
-          <div>RANGE</div>
-          <div>REGION</div>
-          <div>YEAR</div>
-        </div>
-        {guesses.map((g, i) => (
-          <div className={`grid-row ${g.win ? "row-win" : ""}`} key={g.champion.id}>
-            <div className="col-champ champ-cell">
-              <span className="try-index">{i + 1}</span>
-              <img src={iconUrl(g.champion)} alt="" />
-              <span>{g.champion.name}</span>
+        {guesses.length > 0 && (
+          <div className="board-scroll">
+            <div className="board">
+              <div className="board-head">
+                <div>Champion</div>
+                <div>Position</div>
+                <div>Class</div>
+                <div>Resource</div>
+                <div>Range</div>
+                <div>Region</div>
+                <div>Year</div>
+              </div>
+              {newestFirst.map((g) => {
+                const animate = g.champion.id === revealId;
+                return (
+                  <div className={`board-row ${g.win ? "row-win" : ""}`} key={g.champion.id}>
+                    <div className={`tile tile-champ ${animate ? "pop" : ""}`} title={g.champion.name}>
+                      <img src={iconUrl(g.champion)} alt={g.champion.name} />
+                      <span className="tile-name">{g.champion.name}</span>
+                    </div>
+                    <Cell level={g.position} step={1} animate={animate}>
+                      {g.champion.positions.map(titleCase).join(", ") || "—"}
+                    </Cell>
+                    <Cell level={g.role} step={2} animate={animate}>
+                      {g.champion.roles.map(titleCase).join(", ") || "—"}
+                    </Cell>
+                    <Cell level={g.resource} step={3} animate={animate}>
+                      {g.champion.resource ? titleCase(g.champion.resource) : "—"}
+                    </Cell>
+                    <Cell level={g.attackType} step={4} animate={animate}>
+                      {g.champion.attackType ? titleCase(g.champion.attackType) : "—"}
+                    </Cell>
+                    <Cell level={g.faction} step={5} animate={animate}>
+                      {g.champion.faction ? titleCase(g.champion.faction) : "—"}
+                    </Cell>
+                    <Cell
+                      level={g.year}
+                      step={6}
+                      animate={animate}
+                      arrow={g.yearDirection !== "same" ? g.yearDirection : undefined}
+                    >
+                      {g.champion.releaseYear ?? "—"}
+                    </Cell>
+                  </div>
+                );
+              })}
             </div>
-            <Cell level={g.position}>{g.champion.positions.map(titleCase).join(", ") || "—"}</Cell>
-            <Cell level={g.role}>{g.champion.roles.map(titleCase).join(", ") || "—"}</Cell>
-            <Cell level={g.resource}>{g.champion.resource ? titleCase(g.champion.resource) : "—"}</Cell>
-            <Cell level={g.attackType}>{g.champion.attackType ? titleCase(g.champion.attackType) : "—"}</Cell>
-            <Cell level={g.faction}>{g.champion.faction ? titleCase(g.champion.faction) : "—"}</Cell>
-            <Cell level={g.year} arrow={g.yearDirection !== "same" ? g.yearDirection : undefined}>
-              {g.champion.releaseYear ?? "—"}
-            </Cell>
           </div>
-        ))}
-        {Array.from({ length: emptyRows }).map((_, i) => (
-          <div className="grid-row grid-row-empty" key={`empty-${i}`}>
-            <div className="col-champ champ-cell empty-champ">
-              <span className="try-index">{guesses.length + i + 1}</span>
-              <span className="empty-dot" />
-            </div>
-            {Array.from({ length: 6 }).map((_, j) => (
-              <div className="cell cell-empty" key={j} />
-            ))}
-          </div>
-        ))}
-      </div>
+        )}
 
-      <Legend />
+        <Legend />
 
-      {toast && <div className="toast">{toast}</div>}
+        {toast && <div className="toast">{toast}</div>}
 
-      {modalOpen && (
-        <ResultModal
-          outcome={outcome}
-          answer={answer}
-          guessCount={guesses.length}
-          rank={rank}
-          onClose={() => setModalOpen(false)}
-          onShare={shareResult}
-        />
-      )}
+        {modalOpen && (
+          <ResultModal
+            outcome={outcome}
+            answer={answer}
+            guessCount={guesses.length}
+            rank={rank}
+            onClose={() => setModalOpen(false)}
+            onShare={shareResult}
+          />
+        )}
 
-      {statsOpen && <StatsModal stats={stats} onClose={() => setStatsOpen(false)} />}
+        {statsOpen && <StatsModal stats={stats} onClose={() => setStatsOpen(false)} />}
 
-      <footer className="foot">
-        Champion data via Riot Games' public API. Not affiliated with or endorsed by Riot Games.
-      </footer>
+        <footer className="foot">
+          Champion data via Riot Games' public API. Not affiliated with or endorsed by Riot Games.
+        </footer>
       </div>
     </>
   );
 }
 
-function Cell(props: { level: MatchLevel; arrow?: "higher" | "lower"; children: React.ReactNode }) {
+function Cell(props: {
+  level: MatchLevel;
+  step: number;
+  animate: boolean;
+  arrow?: "higher" | "lower";
+  children: React.ReactNode;
+}) {
+  const cls = [
+    "tile",
+    `tile-${props.level}`,
+    props.arrow ? `tile-arrow tile-${props.arrow}` : "",
+    props.animate ? "flip" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
   return (
-    <div className={`cell cell-${props.level}`}>
-      <span>{props.children}</span>
-      {props.arrow === "higher" && <span className="big-arrow">▲</span>}
-      {props.arrow === "lower" && <span className="big-arrow">▼</span>}
+    <div className={cls} style={props.animate ? { animationDelay: `${props.step * 0.32}s` } : undefined}>
+      <span className="tile-text">{props.children}</span>
     </div>
   );
 }
@@ -459,11 +541,11 @@ function BarsIcon() {
 function StatsModal({ stats, onClose }: { stats: Stats; onClose: () => void }) {
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className="modal modal-stats" onClick={(e) => e.stopPropagation()}>
+      <div className="frame modal" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose} aria-label="Close">
           ×
         </button>
-        <h2 className="modal-title stats-title">Statistics</h2>
+        <h2 className="modal-title">Statistics</h2>
         <div className="stats-grid">
           <div className="stat-tile">
             <div className="stat-num">{stats.played}</div>
@@ -493,26 +575,26 @@ function StatsModal({ stats, onClose }: { stats: Stats; onClose: () => void }) {
 
 function Legend() {
   return (
-    <div className="legend">
-      <div className="legend-title">COLOR INDICATORS</div>
+    <section className="frame legend">
+      <div className="legend-title">Color indicators</div>
       <div className="legend-items">
         <div className="legend-item">
-          <span className="swatch correct" /> Correct
+          <span className="swatch tile-correct" /> Correct
         </div>
         <div className="legend-item">
-          <span className="swatch partial" /> Partial
+          <span className="swatch tile-partial" /> Partial
         </div>
         <div className="legend-item">
-          <span className="swatch wrong" /> Incorrect
+          <span className="swatch tile-wrong" /> Incorrect
         </div>
         <div className="legend-item">
-          <span className="swatch wrong arrow-swatch">▲</span> Higher
+          <span className="swatch tile-wrong tile-arrow tile-higher" /> Higher
         </div>
         <div className="legend-item">
-          <span className="swatch wrong arrow-swatch">▼</span> Lower
+          <span className="swatch tile-wrong tile-arrow tile-lower" /> Lower
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
@@ -546,19 +628,18 @@ function ResultModal(props: {
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
-      <div className={`modal ${won ? "modal-win" : "modal-lose"}`} onClick={(e) => e.stopPropagation()}>
+      <div className={`frame modal ${won ? "modal-win" : "modal-lose"}`} onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose} aria-label="Close">
           ×
         </button>
-        <h2 className="modal-title">{won ? "VICTORY!" : "DEFEAT"}</h2>
+        <h2 className="modal-title result-title">{won ? "Victory!" : "Defeat"}</h2>
 
-        <div className="modal-champ">
+        <div className="result-champ">
           <img src={iconUrl(answer)} alt="" />
-          <div>
-            <div className="modal-sub">{won ? "You guessed" : "The champion was"}</div>
-            <div className="modal-name">{answer.name}</div>
-          </div>
         </div>
+        <div className="modal-sub">{won ? "You guessed" : "The champion was"}</div>
+        <div className="modal-name">{answer.name}</div>
+        <div className="modal-champ-title">{answer.title}</div>
 
         {won && rank != null && (
           <p className="modal-line">
@@ -569,12 +650,12 @@ function ResultModal(props: {
           Tries used: <strong>{guessCount}/{MAX_GUESSES}</strong>
         </p>
 
-        <button className="share-btn wide" onClick={onShare}>
-          SHARE RESULT
+        <button className="gold-btn wide" onClick={onShare}>
+          Share result
         </button>
 
         <div className="modal-countdown">
-          <div className="countdown-label">NEXT CHAMPION IN</div>
+          <div className="countdown-label">Next champion in</div>
           <Countdown />
         </div>
       </div>
